@@ -8,7 +8,7 @@ class MoviesController < ApplicationController
 
   def show
     movie = find_movie
-    render json: movie
+    render json: movie, serializer: MovieSummarySerializer
   end
 
   def summary
